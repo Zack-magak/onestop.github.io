@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One Stop Digital</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.3.0/alpine.js"></script>
+</head>
+<body class="bg-gray-100" x-data="{ openService: null }">
+    <!-- Header with animated background -->
+    <header class="bg-gradient-to-r from-blue-600 to-blue-800 text-white shadow-lg">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <a href="https://www.onestopdigital.com" class="text-2xl font-bold hover:scale-105 transition-transform">
+                    One Stop Digital
+                </a>
+                <div class="hidden md:flex space-x-6">
+                    <a href="#services" class="hover:text-blue-200 hover:scale-105 transition-all">Services</a>
+                    <a href="#products" class="hover:text-blue-200 hover:scale-105 transition-all">Products</a>
+                    <a href="#contact" class="hover:text-blue-200 hover:scale-105 transition-all">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section with animation -->
+    <section class="bg-gradient-to-b from-blue-700 to-blue-900 text-white py-20">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4 animate-pulse">Your One-Stop Digital Solution</h1>
+            <p class="text-xl mb-8">Professional cyber services at affordable rates</p>
+            <a href="#contact" class="bg-white text-blue-700 px-8 py-3 rounded-full font-bold hover:bg-blue-100 transform hover:scale-105 transition-all duration-300 shadow-lg">
+                Get Started
+            </a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">Our Services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- KRA Services -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md transform hover:scale-105 transition-all duration-300"
+                     x-data="{ open: false }">
+                    <div class="cursor-pointer" @click="open = !open">
+                        <i class="fas fa-print text-3xl text-blue-600 mb-4"></i>
+                        <h3 class="text-xl font-bold mb-2">KRA Services</h3>
+                        <button class="text-blue-600 hover:text-blue-800">
+                            <i class="fas" :class="open ? 'fa-chevron-up' : 'fa-chevron-down'"></i>
+                        </button>
+                    </div>
+                    <div x-show="open" class="mt-4 space-y-2">
+                        <p class="pl-4 border-l-2 border-blue-500">PIN Registration</p>
+                        <p class="pl-4 border-l-2 border-blue-500">File Returns</p>
+                        <p class="pl-4 border-l-2 border-blue-500">Payments</p>
+                        <p class="pl-4 border-l-2 border-blue-500">Tax Compliance Certificate</p>
+                    </div>
+                </div>
+
+                <!-- Photocopying -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md transform hover:scale-105 transition-all duration-300"
+                     x-data="{ open: false }">
+                    <div class="cursor-pointer" @click="open = !open">
+                        <i class="fas fa-copy text-3xl text-blue-600 mb-4"></i>
+                        <h3 class="text-xl font-bold mb-2">Photocopying</h3>
+                        <button class="text-blue-600 hover:text-blue-800">
+                            <i class="fas" :class="open ? 'fa-chevron-up' : 'fa-chevron-down'"></i>
+                        </button>
+                    </div>
+                    <div x-show="open" class="mt-4 space-y-2">
+                        <p class="pl-4 border-l-2 border-blue-500">Academic Materials</p>
+                        <p class="pl-4 border-l-2 border-blue-500">Official Forms</p>
+                        <p class="pl-4 border-l-2 border-blue-500">ID Copies</p>
+                        <p class="pl-4 border-l-2 border-blue-500">Business Documents</p>
+                    </div>
+                </div>
+
+                <!-- Typing Services -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md transform hover:scale-105 transition-all duration-300"
+                     x-data="{ open: false }">
+                    <div class="cursor-pointer" @click="open = !open">
+                        <i class="fas fa-keyboard text-3xl text-blue-600 mb-4"></i>
+                        <h3 class="text-xl font-bold mb-2">Typing Services</h3>
+                        <button class="text-blue-600 hover:text-blue-800">
+                            <i class="fas" :class="open ? 'fa-chevron-up' : 'fa-chevron-down'"></i>
+                        </button>
+                    </div>
+                    <div x-show="open" class="mt-4 space-y-2">
+                        <p class="pl-4 border-l-2 border-blue-500">Resumes</p>
+                        <p class="pl-4 border-l-2 border-blue-500">Reports</p>
+                        <p class="pl-4 border-l-2 border-blue-500">Applications</p>
+                        <p class="pl-4 border-l-2 border-blue-500">Assignments</p>
+                        <p class="pl-4 border-l-2 border-blue-500">Business Letters</p>
+                        <p class="pl-4 border-l-2 border-blue-500">Other Documents</p>
+                    </div>
+                </div>
+
+                <!-- Internet Services -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md transform hover:scale-105 transition-all duration-300"
+                     x-data="{ open: false }">
+                    <div class="cursor-pointer" @click="open = !open">
+                        <i class="fas fa-globe text-3xl text-blue-600 mb-4"></i>
+                        <h3 class="text-xl font-bold mb-2">Internet Services</h3>
+                        <button class="text-blue-600 hover:text-blue-800">
+                            <i class="fas" :class="open ? 'fa-chevron-up' : 'fa-chevron-down'"></i>
+                        </button>
+                    </div>
+                    <div x-show="open" class="mt-4 space-y-2">
+                        <p class="pl-4 border-l-2 border-blue-500">Browsing</p>
+                        <p class="pl-4 border-l-2 border-blue-500">Research</p>
+                        <p class="pl-4 border-l-2 border-blue-500">Job Applications</p>
+                        <p class="pl-4 border-l-2 border-blue-500">Email Creation</p>
+                        <p class="pl-4 border-l-2 border-blue-500">Music & Movie Downloads</p>
+                    </div>
+                </div>
+
+                <!-- KUCCPS & HELB -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md transform hover:scale-105 transition-all duration-300"
+                     x-data="{ open: false }">
+                    <div class="cursor-pointer" @click="open = !open">
+                        <i class="fas fa-user-graduate text-3xl text-blue-600 mb-4"></i>
+                        <h3 class="text-xl font-bold mb-2">KUCCPS & HELB</h3>
+                        <button class="text-blue-600 hover:text-blue-800">
+                            <i class="fas" :class="open ? 'fa-chevron-up' : 'fa-chevron-down'"></i>
+                        </button>
+                    </div>
+                    <div x-show="open" class="mt-4 space-y-2">
+                        <p class="pl-4 border-l-2 border-blue-500">Course Selection</p>
+                        <p class="pl-4 border-l-2 border-blue-500">Revision of Choices</p>
+                        <p class="pl-4 border-l-2 border-blue-500">HELB Application Guidance</p>
+                    </div>
+                </div>
+
+                <!-- E-Citizen Services -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md transform hover:scale-105 transition-all duration-300"
+                     x-data="{ open: false }">
+                    <div class="cursor-pointer" @click="open = !open">
+                        <i class="fas fa-id-card text-3xl text-blue-600 mb-4"></i>
+                        <h3 class="text-xl font-bold mb-2">E-Citizen Services</h3>
+                        <button class="text-blue-600 hover:text-blue-800">
+                            <i class="fas" :class="open ? 'fa-chevron-up' : 'fa-chevron-down'"></i>
+                        </button>
+                    </div>
+                    <div x-show="open" class="mt-4 space-y-2">
+                        <p class="pl-4 border-l-2 border-blue-500">Driving License</p>
+                        <p class="pl-4 border-l-2 border-blue-500">NTSA Services</p>
+                        <p class="pl-4 border-l-2 border-blue-500">Passport Applications</p>
+                        <p class="pl-4 border-l-2 border-blue-500">Good Conduct Certificate</p>
+                        <p class="pl-4 border-l-2 border-blue-500">PSV Applications</p>
+                    </div>
+                </div>
+
+                <!-- Binding & Lamination -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md transform hover:scale-105 transition-all duration-300"
+                     x-data="{ open: false }">
+                    <div class="cursor-pointer" @click="open = !open">
+                        <i class="fas fa-book text-3xl text-blue-600 mb-4"></i>
+                        <h3 class="text-xl font-bold mb-2">Binding & Lamination</h3>
+                        <button class="text-blue-600 hover:text-blue-800">
+                            <i class="fas" :class="open ? 'fa-chevron-up' : 'fa-chevron-down'"></i>
+                        </button>
+                    </div>
+                    <div x-show="open" class="mt-4 space-y-2">
+                        <p class="pl-4 border-l-2 border-blue-500">Spiral Binding</p>
+                        <p class="pl-4 border-l-2 border-blue-500">Hard Cover Binding</p>
+                        <p class="pl-4 border-l-2 border-blue-500">Document Lamination</p>
+                        <p class="pl-4 border-l-2 border-blue-500">ID Card Lamination</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section with hover effects -->
+    <section id="products" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">Available Products</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="text-center transform hover:scale-110 transition-transform duration-300">
+                    <i class="fas fa-candy-cane text-4xl text-blue-600 mb-2"></i>
+                    <p>Chocolates</p>
+                </div>
+                <div class="text-center transform hover:scale-110 transition-transform duration-300">
+                    <i class="fas fa-headphones text-4xl text-blue-600 mb-2"></i>
+                    <p>Earphones</p>
+                </div>
+                <div class="text-center transform hover:scale-110 transition-transform duration-300">
+                    <i class="fas fa-plug text-4xl text-blue-600 mb-2"></i>
+                    <p>Phone Chargers</p>
+                </div>
+                <div class="text-center transform hover:scale-110 transition-transform duration-300">
+                    <i class="fas fa-copy text-4xl text-blue-600 mb-2"></i>
+                    <p>Ream Papers</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section with hover effects -->
+    <section id="contact" class="py-16 bg-gray-200">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">Contact Us</h2>
+            <div class="max-w-2xl mx-auto bg-gray-50 p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                <div class="space-y-6">
+                    <div class="flex items-center transform hover:scale-105 transition-transform duration-300">
+                        <i class="fas fa-map-marker-alt text-blue-600 text-xl w-8"></i>
+                        <p>Good morning, Kikuyu town.</p>
+                    </div>
+                    <div class="flex items-center transform hover:scale-105 transition-transform duration-300">
+                        <i class="fas fa-phone text-blue-600 text-xl w-8"></i>
+                        <p>0725307765</p>
+                    </div>
+                    <div class="flex items-center transform hover:scale-105 transition-transform duration-300">
+                        <i class="fas fa-envelope text-blue-600 text-xl w-8"></i>
+                        <p>Onestopdigital@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
